@@ -1,0 +1,41 @@
+{% extends 'home/index.html' %}
+
+{% block content %}
+<div class="resultaat">
+<h1> Gasregio's en bijbehorende kosten in NL</h1>
+<img src="static/images/regio.PNG" />
+<p>De tarieven en regio's voor regiotoeslag zijn bepaald door Gasterra en worden doorberekend aan de leverancier. De leverancier bepaald zelf hoe deze in zijn tarief wordt doorberekend.<br>
+Slechts twee leveranciers laten op hun website zien welke tarieven ze doorberekenen. Het is dus goed om hier extra goed op te letten bij het vergelijken.
+</p>
+<table>
+    <tr>
+        <th>Leverancier/Regio</th>
+	<th>A</th>
+	<th>B</th>
+        <th>C</th>
+        <th>D</th>
+        <th>E</th>
+        <th>F</th>
+        <th>G</th>
+        <th>H</th>
+        <th>I</th>
+        <th>J</th>
+    </tr>
+    {% for item in gasregios %}
+    <tr> 
+        <td>{{ item.leverancier }}</td>
+	<td>{{ item.regio_1}}</td>
+	<td>{{ item.regio_2}}</td>
+        <td>{{ item.regio_3}}</td>
+        <td>{{ item.regio_4}}</td>
+        <td>{{ item.regio_5}}</td>
+        <td>{{ item.regio_6}}</td>
+        <td>{{ item.regio_7}}</td>
+        <td>{{ item.regio_8}}</td>
+        <td>{{ item.regio_9}}</td>
+        <td>{{ item.regio_10}}</td>
+    </tr>
+    {% endfor %}
+</table>
+</div>
+{%endblock%}

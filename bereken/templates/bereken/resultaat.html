@@ -1,0 +1,12 @@
+{% extends 'home/index.html' %}
+{%block content %}
+<div class="resultaat">
+        <h1>Samenvatting</h1>
+		Uw heffingskorting is {{heffingskorting}}<br>
+		Het capaciteitstarief voor 25A bemeten is bij {{netbeheerder}} {{capaciteitstarief_elektriciteit_25A}} incl. BTW<br>
+		Het capaciteitstarief voor gas en verbruik tussen 500 en 4000m3 is bij {{netbeheerder}} {{capaciteitstarief_gas}} incl. BTW.<br>
+		Uw totale kosten voor {{kw_verbruik}}Kwh elektriciteit is {{totaal_elektriciteitskosten}} euro per jaar inclusief capaciteitstarief van uw netbeheerder en de heffingskorting die u krijgt.<br> 
+		Uw totale kosten voor {{gasverbruik}}m3 gas is {{totaal_gaskosten}} euro per jaar inclusief het capaciteitstarief van uw netbeheerder<br><br>
+		<img src={{img_tag}}><br>
+</div>
+{%endblock%}

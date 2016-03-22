@@ -1,0 +1,25 @@
+{%load staticfiles%}
+<DOCTYPE html>
+<html>
+        <head>
+                <title>NRG Controller</title>
+                <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}"
+        </head>
+
+<body>
+    <div class="page-header">
+        <h1>NRG Controller</h1>
+    </div>
+
+    <div class="nav">
+	<div class="navbutton">test</div>
+	<div class="navbutton">home</div>
+	<div class="navbutton">vergelijk</div>
+    </div>
+
+    <div class="main">
+            {% block content %}
+            {% endblock %}
+    </div>
+</body>
+</html>

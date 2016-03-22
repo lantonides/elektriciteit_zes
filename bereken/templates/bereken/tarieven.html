@@ -1,0 +1,33 @@
+{% extends 'home/index.html' %}
+
+{% block content %}
+
+<div class="resultaat">
+<h1> Huidige tarieven</h1>
+<table>
+    <tr>
+        <th>Leverancier</th>
+        <th>Product</th>
+        <th>Kw Prijs</th>
+        <th>m3 gasprijs</th>
+        <th>Vastrecht elektriciteit</th>
+        <th>Vastrecht Gas</th>
+        <th>Datum</th>
+    </tr>
+    {% for item in tarieven %}
+    <tr>
+        <td>{{ item.leverancier }}</td>
+        <td>{{ item.product}}</td>
+        <td>{{ item.prijs_per_Kw}}</td>
+        <td>{{ item.gasprijs_per_m3}}</td>
+        <td>{{ item.vastrecht_elektriciteit}}</td>
+        <td>{{ item.vastrecht_gas}}</td>
+        <td>{{ item.datum}}</td>
+    </tr>
+    {% endfor %}
+</table>
+<p> De tarieven zijn de kale tarieven met 21% BTW die je leverancier berekend maar zonder energiebelasting en ODE. Daarnaast moet u ook nog het capaciteitstarief aan uw netbeheerder betalen. Het vastrecht is een tarief die je aan je leverancier betaald om klant te mogen zijn.<br>
+Het gastarief is inclusief regiotoeslag voor regio A. Let op, elke leevrancier mag zelf bepalen hoe en of de toeslag wordt doorberekend</p>
+</div>
+{%endblock%}
+
